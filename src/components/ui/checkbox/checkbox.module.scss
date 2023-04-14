@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+
+.label {
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+
+	&:checked + .span::after {
+		opacity: 1;
+	}
+}
+
+.span {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 1px solid $primary-light;
+	margin-left: -30px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background-color: $primary-light;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: all 0.2s;
+	}
+}

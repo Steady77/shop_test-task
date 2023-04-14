@@ -1,0 +1,41 @@
+@import 'src/assets/styles/variables';
+
+.item {
+	padding: 15px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgb(236, 236, 236);
+	border-radius: 10px;
+
+	img {
+		object-fit: contain;
+		object-position: center;
+		pointer-events: none;
+	}
+}
+
+.title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 20px;
+	color: $primary;
+}
+
+.image {
+	position: relative;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.price {
+	font-size: 18px;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

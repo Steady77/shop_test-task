@@ -1,0 +1,13 @@
+@import 'src/assets/styles/variables';
+
+.button {
+	font-family: 'Golos Text', sans-serif;
+	border: none;
+	background-color: $primary-light;
+	color: #fff;
+	padding: 8px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+}

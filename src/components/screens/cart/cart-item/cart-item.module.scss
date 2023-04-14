@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid $primary;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 4px;
+}
+
+.actions {
+	margin-top: 12px;
+
+	.inner {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.input {
+		width: 25px;
+		text-align: center;
+		background: #fff;
+		border: none;
+		font-size: 16px;
+	}
+
+	button {
+		padding: 8px 17px;
+	}
+}

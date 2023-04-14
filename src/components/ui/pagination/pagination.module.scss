@@ -1,0 +1,12 @@
+.pagination {
+	text-align: center;
+	margin: 20px 0;
+
+	button + button {
+		margin-left: 5px;
+	}
+
+	.count {
+		margin-bottom: 5px;
+	}
+}

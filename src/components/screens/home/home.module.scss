@@ -1,0 +1,9 @@
+.inner {
+	display: grid;
+	grid-template-columns: minmax(200px, 1fr) 4fr;
+	margin-bottom: 30px;
+
+	@media (max-width: 875px) {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,12 @@
+@import 'src/assets/styles/variables';
+
+.input {
+	font-family: 'Golos Text', sans-serif;
+	border: 1px solid $primary-light;
+	background-color: #fff;
+	color: $primary;
+	padding: 8px 20px;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: 400;
+}
