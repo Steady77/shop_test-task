@@ -1,4 +1,4 @@
-### [Ссылка на демо](https://clinquant-scone-6c0ea2.netlify.app)
+### [Ссылка на демо](https://thriving-salmiakki-1512ff.netlify.app/)
 
 ### Стэк:
 
