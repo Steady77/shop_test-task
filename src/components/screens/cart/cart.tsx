@@ -38,7 +38,9 @@ const Cart: FC = () => {
 				setName('');
 				setPhone('');
 				toast.success('Заказ отправлен');
-				push('/').then(() => resetCart());
+				setTimeout(() => {
+					push('/').then(() => resetCart());
+				}, 3000);
 			},
 
 			onError: () => {
