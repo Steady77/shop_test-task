@@ -1,0 +1,58 @@
+@import 'src/assets/styles/variables';
+
+.inner {
+	display: flex;
+	gap: 30px;
+
+	@media (max-width: 1000px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.content {
+	flex-basis: 50%;
+
+	@media (max-width: 1000px) {
+		flex-basis: 100%;
+	}
+}
+
+.title {
+	font-size: 46px;
+	color: $primary;
+	margin-bottom: 20px;
+
+	@media (max-width: 500px) {
+		font-size: 36px;
+	}
+}
+
+.list {
+	> li {
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+}
+
+.imageContainer {
+	width: 50%;
+	background-color: rgb(236, 236, 236);
+	border-radius: 10px;
+	position: relative;
+
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+
+	.image {
+		object-fit: contain;
+		position: relative !important;
+	}
+}
+
+.toCartBtn {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
