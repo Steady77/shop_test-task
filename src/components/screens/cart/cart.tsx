@@ -12,7 +12,11 @@ import Input from '@/components/ui/input/input';
 import { useMutation } from '@tanstack/react-query';
 import { OrderService } from '@/services/order.service';
 import { toast } from 'react-toastify';
-import { withMask } from 'use-mask-input';
+import dynamic from 'next/dynamic';
+
+const DynamicMaskInput = dynamic(() => import('./mask-input'), {
+	ssr: false,
+});
 
 const Cart: FC = () => {
 	const [name, setName] = useState('');
@@ -88,10 +92,7 @@ const Cart: FC = () => {
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
-							<Input
-								ref={withMask('9(999) 999-99-99')}
-								type="tel"
-								placeholder="Телефон"
+							<DynamicMaskInput
 								value={phone}
 								onChange={(e) => setPhone(e.target.value)}
 							/>
