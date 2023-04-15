@@ -4,7 +4,12 @@ import { useCart } from '@/hooks/use-cart';
 import { Product } from '@/services/product/product.types';
 import { FC } from 'react';
 
-const AddToCartButton: FC<{ product: Product }> = ({ product }) => {
+interface AddToCartButtonProps {
+	product: Product;
+	className?: string;
+}
+
+const AddToCartButton: FC<AddToCartButtonProps> = ({ product, className }) => {
 	const { addToCart, removeFromCart } = useActions();
 	const { items } = useCart();
 
@@ -23,7 +28,7 @@ const AddToCartButton: FC<{ product: Product }> = ({ product }) => {
 	};
 
 	return (
-		<div>
+		<div className={className}>
 			<Button onClick={addToCartHandler}>{currentElement ? '-' : '+'}</Button>
 		</div>
 	);
