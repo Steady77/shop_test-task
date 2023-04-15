@@ -12,6 +12,7 @@ import Input from '@/components/ui/input/input';
 import { useMutation } from '@tanstack/react-query';
 import { OrderService } from '@/services/order.service';
 import { toast } from 'react-toastify';
+import { withMask } from 'use-mask-input';
 
 const Cart: FC = () => {
 	const [name, setName] = useState('');
@@ -88,6 +89,7 @@ const Cart: FC = () => {
 								onChange={(e) => setName(e.target.value)}
 							/>
 							<Input
+								ref={withMask('9(999) 999-99-99')}
 								type="tel"
 								placeholder="Телефон"
 								value={phone}
