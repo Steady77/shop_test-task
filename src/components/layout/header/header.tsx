@@ -16,8 +16,8 @@ const Header: FC = () => {
 						<p className={styles.logo}>LOGO</p>
 					</Link>
 
-					{router.asPath !== '/' ? (
-						<Button onClick={() => router.push('/')}>Назад</Button>
+					{router.asPath === '/cart' ? (
+						<Button onClick={() => router.push('/')}>На главную</Button>
 					) : (
 						<CartIcon />
 					)}
