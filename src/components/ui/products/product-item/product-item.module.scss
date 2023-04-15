@@ -1,6 +1,11 @@
 @import 'src/assets/styles/variables';
 
 .item {
+	position: relative;
+}
+
+.link {
+	position: relative;
 	padding: 15px;
 	height: 300px;
 	display: flex;
@@ -14,6 +19,12 @@
 		object-position: center;
 		pointer-events: none;
 	}
+}
+
+.toCartBtn {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
 }
 
 .title {
@@ -32,10 +43,5 @@
 
 .price {
 	font-size: 18px;
-}
-
-.footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	text-align: right;
 }
