@@ -16,7 +16,10 @@ const Pagination: FC<PaginationProps> = ({
 }) => {
 	const pagesCount = Math.ceil(length / PER_PAGE);
 
-	if (pagesCount === 1) return null;
+	if (pagesCount <= 1) {
+		setCurrentPage(1);
+		return null;
+	}
 
 	return (
 		<div className={styles.pagination}>
