@@ -13,22 +13,24 @@ interface CartItemProps {
 const CartItem: FC<CartItemProps> = ({ cartItem }) => {
 	return (
 		<div className={styles.item}>
-			<Link href={`product/${cartItem.product.id}`}>
+			<Link
+				href={`product/${cartItem.product.id}`}
+				className={styles.link}
+			>
 				<Image
 					src={cartItem.product.image}
 					alt={cartItem.product.title}
 					width={100}
 					height={100}
 				/>
-			</Link>
-			<div>
-				<div className={styles.name}>{cartItem.product.title}</div>
-				<div className={styles.price}>
-					{convertPrice(cartItem.product.regular_price.value)}
+				<div className={styles.rightContent}>
+					<p className={styles.name}>{cartItem.product.title}</p>
+					<p className={styles.price}>
+						{convertPrice(cartItem.product.regular_price.value)}
+					</p>
 				</div>
-
-				<CartActions item={cartItem} />
-			</div>
+			</Link>
+			<CartActions item={cartItem} />
 		</div>
 	);
 };
